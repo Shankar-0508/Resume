@@ -1,0 +1,147 @@
+/* Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  color: #333;
+  background: url('https://img.freepik.com/premium-photo/white-office-with-white-brick-wall-white-desk-with-white-desk-window-with-plant-it_337384-7170.jpg') no-repeat center center fixed;
+  background-size: cover;
+  line-height: 1.6;
+}
+
+/* Main Content Wrapper */
+.content-wrapper {
+  max-width: 960px;
+  margin: 60px auto;
+  padding: 40px 30px;
+}
+
+/* Content Box with Glassmorphism */
+.content-bg {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 50px;
+  border-radius: 16px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+/* Header */
+header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+header h1 {
+  font-family: 'Caveat', cursive;
+  font-size: 3.8em;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+header h2 {
+  font-size: 1.5em;
+  color: #555;
+  font-weight: 400;
+}
+
+/* Paragraphs */
+main p {
+  font-size: 1.15em;
+  margin-bottom: 20px;
+  color: #444;
+}
+
+main a {
+  color: #0077cc;
+  text-decoration: none;
+  font-weight: 600;
+  position: relative;
+}
+
+main a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  height: 2px;
+  width: 100%;
+  background-color: #0077cc;
+  transition: transform 0.3s ease;
+  transform: scaleX(0);
+  transform-origin: right;
+}
+
+main a:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 25px 10px;
+  background: rgba(0, 0, 0, 0.85);
+  color: #f0f0f0;
+  margin-top: 60px;
+  font-size: 0.95em;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+}
+
+footer a {
+  color: #66d9ef;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+.socials {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.socials i {
+  font-size: 42px; /* Increase size here */
+  color: #444;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.socials i:hover {
+  transform: scale(1.2);
+  color: #0077cc;
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  .content-bg {
+    padding: 30px 20px;
+  }
+
+  header h1 {
+    font-size: 2.5em;
+  }
+
+  header h2 {
+    font-size: 1.2em;
+  }
+
+  main p {
+    font-size: 1em;
+  }
+
+
+}
